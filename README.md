@@ -1,3 +1,3 @@
 # MySQL_golang
 
-Basic MySQL in Golang.
+Basic MySQL database access using Golang.
