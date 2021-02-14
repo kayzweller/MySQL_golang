@@ -19,46 +19,46 @@ func main() {
 	}
 
 	{ // Create a new table
-		query := `
-		    CREATE TABLE users (
-		        id INT AUTO_INCREMENT,
-		        username TEXT NOT NULL,
-		        password TEXT NOT NULL,
-		        created_at DATETIME,
-		        PRIMARY KEY (id)
-		    );`
+		// query := `
+		//     CREATE TABLE users (
+		//         id INT AUTO_INCREMENT,
+		//         username TEXT NOT NULL,
+		//         password TEXT NOT NULL,
+		//         created_at DATETIME,
+		//         PRIMARY KEY (id)
+		//     );`
 
-		if _, err := db.Exec(query); err != nil {
-			log.Fatal(err)
-		}
+		// if _, err := db.Exec(query); err != nil {
+		// 	log.Fatal(err)
+		// }
 	}
 
 	{ // Insert a new user 1
-		username := "AlbertKristaen"
-		password := "secret1"
-		createdAt := time.Now()
+		// username := "AlbertKristaen"
+		// password := "secret1"
+		// createdAt := time.Now()
 
-		result, err := db.Exec(`INSERT INTO users (username, password, created_at) VALUES (?, ?, ?)`, username, password, createdAt)
-		if err != nil {
-			log.Fatal(err)
-		}
+		// result, err := db.Exec(`INSERT INTO users (username, password, created_at) VALUES (?, ?, ?)`, username, password, createdAt)
+		// if err != nil {
+		// 	log.Fatal(err)
+		// }
 
-		id, err := result.LastInsertId()
-		fmt.Println(id)
+		// id, err := result.LastInsertId()
+		// fmt.Println(id)
 	}
 
 	{ // Insert a new user 2
-		username := "AloonaKristaen"
-		password := "secret2"
-		createdAt := time.Now()
+		// username := "AloonaKristaen"
+		// password := "secret2"
+		// createdAt := time.Now()
 
-		result, err := db.Exec(`INSERT INTO users (username, password, created_at) VALUES (?, ?, ?)`, username, password, createdAt)
-		if err != nil {
-			log.Fatal(err)
-		}
+		// result, err := db.Exec(`INSERT INTO users (username, password, created_at) VALUES (?, ?, ?)`, username, password, createdAt)
+		// if err != nil {
+		// 	log.Fatal(err)
+		// }
 
-		id, err := result.LastInsertId()
-		fmt.Println(id)
+		// id, err := result.LastInsertId()
+		// fmt.Println(id)
 	}
 
 	{ // Query a single user
